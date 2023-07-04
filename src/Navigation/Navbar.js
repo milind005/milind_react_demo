@@ -22,7 +22,8 @@ const Navbar = ({ navObj, setNav }) => {
 
             {Object.keys(navObj).map((cur) => {
                 return (
-                    <a className={!!navObj[cur] && "active"}
+                    <a key={cur}
+                        className={!!navObj[cur] && "active"}
                         onClick={() => navHandler(cur)}
                     >{cur}</a>
                 )
