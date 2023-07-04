@@ -27,18 +27,21 @@ import ULF2 from './useLayoutEffect/uLF2';
 import ULF3 from './useLayoutEffect/uLF3';
 import MemoFun from './Memo/sample';
 import HocMain from './HOC/hocMain';
+import URedForm from './useReducer/URedForm';
+import URedTodo from './useReducer/URedTodo';
 
 const navObj = {
   "classCompo": false,
-  "useState": false,
-  "useEffect": true,
+  "useState": true,
+  "useEffect": false,
   "useREF": false,
   "useMemo": false,
   "useCallBack": false,
   "useContext": false,
   "useLayoutEffect": false,
   "memo": false,
-  "Higher_order_fun": false
+  "Higher_order_fun": false,
+  "use_reducer": false
 }
 
 
@@ -65,13 +68,13 @@ function App() {
         <h1>Todolist</h1>
         <Todolist />
         <hr />
-        <h4>USeEffect</h4>
-        <Chatconn />
       </div>}
 
 
       {nav.useEffect && <div style={{ border: "2px solid black" }}>
         <h1>USe Effect</h1>
+        <Chatconn />
+        <hr />
         <UE2 />
         <hr />
         <UE3 name={"Milind"} />
@@ -138,6 +141,14 @@ function App() {
         nav.Higher_order_fun && <div>
           <h1>Higher order function</h1>
           <HocMain />
+        </div>
+      }
+      {
+        nav.use_reducer && <div>
+          <h1>use Reducer</h1>
+          <URedForm />
+          <hr />
+          <URedTodo />
         </div>
       }
     </div >

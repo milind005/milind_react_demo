@@ -29,6 +29,7 @@ const Todolist = () => {
             if (ele.id !== id) {
                 return true
             }
+            return false
         }))
     }
 
