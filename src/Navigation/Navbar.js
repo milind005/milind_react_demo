@@ -1,12 +1,33 @@
 import React from 'react'
 import "./nav.css"
-const Navbar = () => {
+const Navbar = ({ navObj, setNav }) => {
+
+
+    function navHandler(cur) {
+
+        let obj = { ...navObj }
+        Object.keys(obj).forEach((cat) => {
+            if (cat === cur) {
+                obj[cat] = true
+            }
+            else {
+                obj[cat] = false
+            }
+        })
+
+        setNav(obj)
+    }
     return (
         <div className='topnav'>
-            <a class="active" href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+
+            {Object.keys(navObj).map((cur) => {
+                return (
+                    <a className={!!navObj[cur] && "active"}
+                        onClick={() => navHandler(cur)}
+                    >{cur}</a>
+                )
+            })}
+
         </div>
     )
 }
