@@ -3,6 +3,8 @@ import React, { Fragment, useState } from 'react'
 
 import './App.css';
 import Navbar from './Navigation/Navbar';
+
+import CCOmpo from './ClassComponent/CCOmpo';
 import Us1 from './useState/Us1';
 import Uform from './useState/Uform';
 import Todolist from './useState/Todolist';
@@ -26,8 +28,8 @@ import ULF3 from './useLayoutEffect/uLF3';
 
 
 
-
 const navObj = {
+  "classCompo": false,
   "useState": false,
   "useEffect": true,
   "useREF": false,
@@ -46,6 +48,10 @@ function App() {
     <div className="App">
       <Navbar navObj={nav} setNav={setNav} />
 
+      {nav.classCompo && <div>
+        <h1>class component life cycle</h1>
+        <p>we set intrval interval of 2 sec and if you delete the lifecycle used here </p>
+        <CCOmpo /></div>}
 
       {nav.useState && <div style={{ border: "2px solid black" }}>
         <h1>Milind</h1>
