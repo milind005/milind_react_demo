@@ -29,6 +29,8 @@ import MemoFun from './Memo/sample';
 import HocMain from './HOC/hocMain';
 import URedForm from './useReducer/URedForm';
 import URedTodo from './useReducer/URedTodo';
+import RWCmain from './ReducerWithContext/RWCmain';
+import RRDmain from './React_Router_Dom/RRDmain';
 
 const navObj = {
   "classCompo": false,
@@ -41,7 +43,9 @@ const navObj = {
   "useLayoutEffect": false,
   "memo": false,
   "Higher_order_fun": false,
-  "use_reducer": false
+  "use_reducer": false,
+  "reducer_with_context": false,
+  "react_router_dom": false
 }
 
 
@@ -149,6 +153,19 @@ function App() {
           <URedForm />
           <hr />
           <URedTodo />
+        </div>
+      }
+
+      {
+        nav.reducer_with_context && <div>
+          <h1>use Reducer and Context</h1>
+          <RWCmain />
+        </div>
+      }
+      {
+        nav.react_router_dom && <div>
+          <h1>use React Router DOM</h1>
+          <RRDmain />
         </div>
       }
     </div >
