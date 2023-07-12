@@ -14,6 +14,8 @@ const MemoFun = () => {
     console.log("first value renders")
     return (
         <div>
+            <h1>memo function</h1>
+            <p>see in console log it stops rendering memo child component if props not updated </p>
             <h1>first {count}</h1>
             <button onClick={INCR}>Inc Second Count</button>
             <RK scount={scount} setScount={setScount} />

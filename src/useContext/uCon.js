@@ -8,6 +8,7 @@ export default function UCon() {
 
     return (
         <>
+            <h1>Exm 1</h1>
             <button
                 onClick={() => {
                     setThemeVal(themeVal === "light" ? ("dark") : "light")
@@ -32,9 +33,10 @@ function Form() {
 function Panel({ title, children }) {
     const theme = useContext(ThemeContext);
     const className = "panel-" + theme;
+    const blackC = { color: "white", backgroundColor: "black" }
     return (
         <section className={className}>
-            <h1>{title}</h1>
+            <h3 style={(theme == "dark") ? blackC : undefined}>{title}</h3>
             {children}
         </section>
     );

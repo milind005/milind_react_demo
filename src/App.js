@@ -46,7 +46,6 @@ const navObj = {
   "memo": false,
   "Higher_order_fun": false,
   "use_reducer": false,
-  "reducer_with_context": false,
   "react_router_dom": false,
   // "CustomhookMain": false
 }
@@ -137,8 +136,7 @@ function App() {
 
       {
         nav.memo && <div>
-          <h1>memo function</h1>
-          <p>see in console log it stops rendering child component</p>
+
           <MemoFun />
         </div>
       }
@@ -158,12 +156,12 @@ function App() {
         </div>
       }
 
-      {
+      {/* {
         nav.reducer_with_context && <div>
           <h1>use Reducer and Context</h1>
           <RWCmain />
         </div>
-      }
+      } */}
       {
         nav.react_router_dom && <div>
           <h1>use React Router DOM</h1>

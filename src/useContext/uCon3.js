@@ -2,25 +2,29 @@ import React, { createContext, useContext } from 'react'
 const LevelContext = createContext(1);
 const UCon3 = () => {
     return (
-        <Section level={1}>
-            ;kghpiriowhgpih
-            <Heading >Title</Heading>
-            <Section level={2}>
-                <Heading >Heading</Heading>
-                <Heading >Heading</Heading>
-                <Heading >Heading</Heading>
-                <Section level={3}>
-                    <Heading >Sub-heading</Heading>
-                    <Heading >Sub-heading</Heading>
-                    <Heading >Sub-heading</Heading>
-                    <Section level={4}>
-                        <Heading >Sub-sub-heading</Heading>
-                        <Heading >Sub-sub-heading</Heading>
-                        <Heading >Sub-sub-heading</Heading>
+        <>
+            <h1>Exm 3</h1>
+            <h3>Headings get nested according to level context passed on section</h3>
+            <Section level={1}>
+                ;kghpiriowhgpih
+                <Heading >Title</Heading>
+                <Section level={2}>
+                    <Heading >Heading</Heading>
+                    <Heading >Heading</Heading>
+                    <Heading >Heading</Heading>
+                    <Section level={3}>
+                        <Heading >Sub-heading</Heading>
+                        <Heading >Sub-heading</Heading>
+                        <Heading >Sub-heading</Heading>
+                        <Section level={4}>
+                            <Heading >Sub-sub-heading</Heading>
+                            <Heading >Sub-sub-heading</Heading>
+                            <Heading >Sub-sub-heading</Heading>
+                        </Section>
                     </Section>
                 </Section>
             </Section>
-        </Section>
+        </>
     )
 }
 

@@ -11,14 +11,16 @@ const UCon2 = () => {
     console.log(myUser)
     return (
         <div>
+            <h1>Exm 2</h1>
             <button
                 onClick={() => setMyTheme(myTheme === "light" ? "dark" : "light")}
-            >{myTheme === "light" ? "dark" : "light"}</button>
+            >Click Change Theme:{myTheme === "light" ? "dark" : "light"}</button>
             <user.Provider value={{ myUser, setMyUser }}>
                 <theme.Provider value={myTheme}>
                     <Panel >
                         <Users />
-                        <MessageBox />
+                        <MessageBox />(this is diff compo)
+                        <h4>User context changes when you click on user</h4>
                     </Panel>
                 </theme.Provider>
             </user.Provider>
@@ -41,6 +43,7 @@ function Users() {
             <Button val="Milind" changeUser={changeUser}>Milind</Button>
             <Button val="Ram" changeUser={changeUser}>Ram</Button>
             <Button val="Sham" changeUser={changeUser}>Sham</Button>
+            (this is diff compo)
         </div>
     )
 }

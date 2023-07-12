@@ -23,6 +23,7 @@ const ULF1 = () => {
     return (
         <div>
             <h1>This is screen of {title}</h1>
+            <h1>In console shows the process and difference of useEffect and UseLayoutEffect</h1>
         </div>
     )
 }

@@ -6,7 +6,8 @@ const HocMain = () => {
 
     return (
         <div>
-            HOC
+
+            <h3>Here the components are wrapped in HOC with offset and calling same function for state update</h3>
             <MouseClick raje="ram" />
             <MouseHover />
         </div>
