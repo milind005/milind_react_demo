@@ -1,31 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { createConnection } from './chat'
-
-const Chatroom = ({ roomId }) => {
-    const [serverUrl, setServerUrl] = useState("'https://localhost:1234'")
-
-    useEffect(
-        () => {
-            const connection = createConnection(serverUrl, roomId)
-            connection.connect()
-            return () => {
-                connection.disconnect()
-            }
-        }
-        , [serverUrl, roomId])
-
-    return (
-        <>
-            Server Url
-            <input type=""
-                value={serverUrl}
-                onChange={(e) => setServerUrl(e.target.value)}
-            />
-            <h1>Welcome to {roomId} room</h1>
-        </>
-    )
-
-}
 
 
 
@@ -45,7 +18,7 @@ const Chatconn = () => {
                     <option value="travel">travel</option>
                     <option value="music">music</option>
                 </select>
-            </label>
+            </label>4
             <button
                 onClick={() => setshow(!show)}
             >
@@ -60,3 +33,48 @@ const Chatconn = () => {
 }
 
 export default Chatconn
+
+
+
+function createConnection(serverUrl, roomId) {
+    // A real implementation would actually connect to the server
+    return {
+        connect() {
+            console.log('✅ Connecting to "' + roomId + '" room at ' + serverUrl + '...');
+        },
+        disconnect() {
+            console.log('❌ Disconnected from "' + roomId + '" room at ' + serverUrl);
+        }
+    };
+}
+
+
+
+const Chatroom = ({ roomId }) => {
+    const [serverUrl, setServerUrl] = useState("'https://localhost:1234'")
+
+    useEffect(
+        () => {
+            const connection = createConnection(serverUrl, roomId)
+            connection.connect()
+            return () => {
+                connection.disconnect()
+            }
+        }
+        , [serverUrl, roomId])
+
+    return (
+        <>
+
+            <input type=""
+                value={serverUrl}
+                onChange={(e) => setServerUrl(e.target.value)}
+            />
+            <h1>Welcome to {roomId} room</h1>
+            here chatroom shows the useEffect runs and connects and when hides cleanup function runs
+            Server Url watch in console
+        </>
+    )
+
+}
+

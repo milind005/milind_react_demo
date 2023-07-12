@@ -13,6 +13,12 @@ const Todolist = () => {
     const [tasks, setTasks] = useState(initialTodos)
 
     function AddTodo(value) {
+        if (!value) {
+            alert("please enter some value")
+            return
+        }
+
+
         setTasks([
             ...tasks,
             {

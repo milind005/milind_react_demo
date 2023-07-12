@@ -1,5 +1,7 @@
 
 import React, { Fragment, useState } from 'react'
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 
 import './App.css';
 import Navbar from './Navigation/Navbar';
@@ -10,7 +12,6 @@ import Uform from './useState/Uform';
 import Todolist from './useState/Todolist';
 import Chatconn from './useEffect/chatconn';
 import UE2 from './useEffect/UE2';
-import UE3 from './useEffect/UE3';
 import UR1 from './useRef/UR1';
 import URTimer from './useRef/URTimer';
 import Ur3 from './useRef/Ur3';
@@ -31,6 +32,7 @@ import URedForm from './useReducer/URedForm';
 import URedTodo from './useReducer/URedTodo';
 import RWCmain from './ReducerWithContext/RWCmain';
 import RRDmain from './React_Router_Dom/RRDmain';
+// import CustomhookMain from './CustomHooks/CustomhookMain';
 
 const navObj = {
   "classCompo": false,
@@ -45,7 +47,8 @@ const navObj = {
   "Higher_order_fun": false,
   "use_reducer": false,
   "reducer_with_context": false,
-  "react_router_dom": false
+  "react_router_dom": false,
+  // "CustomhookMain": false
 }
 
 
@@ -58,8 +61,7 @@ function App() {
       <Navbar navObj={nav} setNav={setNav} />
 
       {nav.classCompo && <div>
-        <h1>class component life cycle</h1>
-        <p>we set intrval interval of 2 sec and if you delete the lifecycle used here </p>
+
         <CCOmpo /></div>}
 
       {nav.useState && <div style={{ border: "2px solid black" }}>
@@ -79,9 +81,9 @@ function App() {
         <h1>USe Effect</h1>
         <Chatconn />
         <hr />
+
+
         <UE2 />
-        <hr />
-        <UE3 name={"Milind"} />
       </div>}
 
 
@@ -165,9 +167,21 @@ function App() {
       {
         nav.react_router_dom && <div>
           <h1>use React Router DOM</h1>
-          <RRDmain />
+
+          <BrowserRouter>
+            <RRDmain />
+          </BrowserRouter>
         </div>
       }
+      {/* {
+        nav.CustomhookMain && <div>
+          <h1>custom hook</h1>
+
+          <BrowserRouter>
+            <CustomhookMain />
+          </BrowserRouter>
+        </div>
+      } */}
     </div >
   );
 }

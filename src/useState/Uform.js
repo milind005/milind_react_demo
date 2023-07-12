@@ -20,7 +20,7 @@ const Uform = () => {
     return (
         <div>
             <div className="simpleForm">
-                <h1>simple Form</h1>
+                <h1>form with simple object(initial State) updating state</h1>
                 <label>
                     First Name:
                     <input type='text'
@@ -42,8 +42,9 @@ const Uform = () => {
 
                 <h3>i am {inputs1.firstName}  {inputs1.lastName} and my email is {inputs1.email}</h3>
             </div>
+            <hr />
             <div className="nestedForm">
-                <h1>Nested Form</h1>
+                <h1>form with Nested object(initial State) updating state</h1>
 
                 <label>
                     Name:

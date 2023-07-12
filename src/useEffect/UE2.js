@@ -3,11 +3,17 @@ import React, { useEffect, useState } from 'react'
 const UE2 = () => {
     const [pos, setPos] = useState({ x: 0, y: 0 })
 
-    WindowsEventHandle("pointermove", (e) => {
+    useWindowsEventHandle("dblclick", (e) => {
         setPos({ x: e.clientX, y: e.clientY })
     })
+
+    useEffect(() => {
+        console.log("dot renders")
+    }, [pos])
     return (
         <div>
+            <h1>here position changes on mouse double click for dot  and useEffect runs in custom hook updates position state</h1>
+
             <div style={{
                 position: 'absolute',
                 backgroundColor: 'pink',
@@ -19,7 +25,9 @@ const UE2 = () => {
                 top: -20,
                 width: 40,
                 height: 40,
+                border: "5px solid black"
             }} />
+
 
         </div>
     )
@@ -30,7 +38,7 @@ export default UE2
 
 
 
-function WindowsEventHandle(event, handlerFun) {
+function useWindowsEventHandle(event, handlerFun) {
     useEffect(() => {
         window.addEventListener(event, handlerFun)
         return () => {

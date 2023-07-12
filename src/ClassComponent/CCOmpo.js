@@ -55,7 +55,8 @@ export default class CCOmpo extends Component {
             "its Gone" : <Counter num={this.state.number} />
           }
           <button onClick={this.setCount}> Click to Add</button> */}
-
+                <h1>class component life cycle</h1>
+                <p>we set intrval interval of 2 sec to update element and if you delete the lifecycle unmout get triggered here see in console </p>
                 <h1><button
                     onClick={() => { this.handleShow() }}
                 >{this.state.showList ? "HIde" : "Show"}</button></h1>
