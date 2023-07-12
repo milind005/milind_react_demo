@@ -17,15 +17,20 @@ const Um2 = () => {
 
     return (
         <div>
+            <h1>here we memoized the exspensive  calculation so when we add todo and component rerenders the app shows stored input</h1>
             <h2>My Todos</h2>
             {todos.map((todo, i) => {
                 return <p key={i}>{todo}</p>
             })}
-            <button onClick={addTodo}>Add Todo</button>
-            <hr />
+            <button onClick={addTodo}>Add Todo only</button>
+            <button onClick={() => {
+                increment()
+                addTodo()
+            }}>Add Todo and increment num too</button>
+            <br />
             <div>
-                count:{count}
-                <button onClick={increment}>+</button>
+                <h5>count:{count}</h5>
+                <button>Add number only</button>
                 <h2>Expensice Calculation</h2>
                 {calculation}
             </div>

@@ -6,7 +6,7 @@ const Ur3 = () => {
     return (
         <div>
             <input type="text" ref={milindRef} />
-            <button onClick={() => milindRef.current.focus()}>focus</button>
+            <button onClick={() => milindRef.current.focus()}>click to focus on input</button>
         </div>
     )
 }

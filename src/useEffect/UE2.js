@@ -12,7 +12,8 @@ const UE2 = () => {
     }, [pos])
     return (
         <div>
-            <h1>here position changes on mouse double click for dot  and useEffect runs in custom hook updates position state</h1>
+            <h1>Double click any where</h1>
+            <h3>here position changes on mouse double click for dot  and useEffect runs in custom hook updates position state</h3>
 
             <div style={{
                 position: 'absolute',

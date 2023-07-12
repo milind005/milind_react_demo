@@ -102,8 +102,8 @@ function App() {
       {nav.useMemo && <div style={{ border: "2px solid black" }}>
         <h1>Use Memo</h1>
         <UmPrime />
-        <hr />
-        <Um2 />
+        {/* <hr />
+        <Um2 /> */}
       </div>}
 
 

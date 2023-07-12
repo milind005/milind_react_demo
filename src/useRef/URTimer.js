@@ -31,6 +31,9 @@ const URTimer = () => {
             <h1>Timer:{diffrenceTime.toFixed(3)}</h1>
             <button onClick={startFun}>Start</button>
             <button onClick={stopTime}>Stop</button>
+
+
+            <p>Here reference variable stores the id of setInterval and maintains it in rerenderswhen number updates each second then provides it for cleanup</p>
         </div>
     )
 }

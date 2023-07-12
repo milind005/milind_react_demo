@@ -3,9 +3,11 @@ import React, { useRef } from 'react'
 const Ur4Scroll = () => {
 
     const myref = useRef(null)
+    const btnref = useRef(null)
 
     function scrollIndex(index) {
         const listNOde = myref.current;
+        const navNOde = btnref.current;
 
         const imgNode = listNOde.querySelectorAll("li > img")[index]
         imgNode.scrollIntoView({
@@ -13,11 +15,15 @@ const Ur4Scroll = () => {
             block: "nearest",
             inline: "center"
         })
+        const btnNode = navNOde.querySelectorAll("button")
+        btnNode.forEach((b) => { b.disabled = false })
+        btnNode[index].disabled = true
     }
     return (
         <div >
             <br /><br /><br />
-            <nav >
+            <h1>click to scroll the image</h1>
+            <nav ref={btnref}>
                 <button onClick={() => scrollIndex(0)}>Tom</button>
                 <button onClick={() => scrollIndex(1)}>Raju</button>
                 <button onClick={() => scrollIndex(2)}>Sheru</button>
