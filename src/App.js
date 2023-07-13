@@ -30,6 +30,7 @@ import ULF2 from './useLayoutEffect/uLF2';
 import ULF3 from './useLayoutEffect/uLF3';
 import MemoFun from './Memo/sample';
 import HocMain from './HOC/hocMain';
+import Hoc2 from './HOC/Hoc2/Hoc2';
 import URedForm from './useReducer/URedForm';
 import URedTodo from './useReducer/URedTodo';
 import RWCmain from './ReducerWithContext/RWCmain';
@@ -150,6 +151,8 @@ function App() {
         nav.Higher_order_fun && <div>
           <h1>Higher order function</h1>
           <HocMain />
+          <hr />
+          <Hoc2 />
         </div>
       }
       {
