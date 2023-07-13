@@ -9,6 +9,8 @@ const Ucb1 = () => {
         setCount((currentValue) => currentValue + 1234)
         num++
     }, []);
+
+    console.log("parent Renders")
     return (
         <div>
             <h5>here useCallBAck stores the function Defination if it is stable and dont change betwin rerenders and passes it to child compo</h5>

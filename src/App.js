@@ -18,8 +18,10 @@ import Ur3 from './useRef/Ur3';
 import Ur4Scroll from './useRef/Ur4Scroll';
 import UmPrime from './UseMemo/umPrime';
 import Um2 from './UseMemo/Um2';
+import Um3 from './UseMemo/Um3';
 import Ucb1 from './useCallBack/ucb1';
 import UCB3 from './useCallBack/UCB3';
+import UCB4 from './useCallBack/UCB4';
 import UCon from './useContext/uCon';
 import UCon2 from './useContext/uCon2';
 import UCon3 from './useContext/uCon3';
@@ -101,6 +103,7 @@ function App() {
       {nav.useMemo && <div style={{ border: "2px solid black" }}>
         <h1>Use Memo</h1>
         {/* <UmPrime /> */}
+        <Um3 />
         <hr />
         <Um2 />
       </div>}
@@ -111,6 +114,8 @@ function App() {
         <Ucb1 />
         <hr />
         <UCB3 />
+        <hr />
+        <UCB4 />
       </div>}
 
 

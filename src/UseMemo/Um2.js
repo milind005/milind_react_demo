@@ -30,7 +30,7 @@ const Um2 = () => {
             <br />
             <div>
                 <h5>count:{count}</h5>
-                <button>Add number only</button>
+                <button onClick={increment}>Add number only</button>
                 <h2>Expensice Calculation</h2>
                 {calculation}
             </div>

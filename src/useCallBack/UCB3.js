@@ -2,7 +2,7 @@ import React, { memo, useCallback, useState } from 'react'
 
 
 const Todos = ({ todos, addTodos }) => {
-    console.log("ucb child render")
+    console.log("Todo child render")
     return (
         <div>
             <h2>My Todos</h2>
@@ -29,14 +29,14 @@ const UCB3 = () => {
     const addTodos = useCallback(() => {
         setTodos(t => [...t, "new Todo"])
     }, [todos])
-
+    console.log("todo PArent renders")
     return (
         <div>
             <MemoedTodo
                 todos={todos}
                 addTodos={addTodos}
             />
-            <hr />
+
             <div>
                 <p>Count:{count}</p>
                 <button onClick={increment}>+</button>
