@@ -22,9 +22,9 @@ export default class CCOmpo extends Component {
 
     handleShow() {
         if (this.state.showList === false) {
-            this.setState({ ...this.state, data: myData, showList: true, })
+            this.setState({ data: myData, showList: true, })
         } else {
-            this.setState({ ...this.state, data: [], showList: false, })
+            this.setState({ data: [], showList: false, })
         }
     }
 
@@ -32,7 +32,7 @@ export default class CCOmpo extends Component {
     handleDelete(id) {
 
         const newArr = this.state.data.filter((cur) => cur.id !== id)
-        this.setState({ ...this.state, data: newArr })
+        this.setState({ data: newArr })
     }
 
 

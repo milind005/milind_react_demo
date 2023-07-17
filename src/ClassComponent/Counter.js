@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 
 
-const mountCount = 0;
-const updateCount = 0;
-const unMountCount = 0;
+
 class Counter extends Component {
     constructor(props) {
         super()
